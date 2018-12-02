@@ -9,18 +9,18 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * License: GPLv2 or later
 
-centrix Integration is free software: you can redistribute it and/or modify
+Centrix Integration is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
 any later version.
 
-centrix Integration is distributed in the hope that it will be useful,
+Centrix Integration is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with centrix Integration. If not, see http://www.gnu.org/licenses/gpl-2.0.txt.
+along with Centrix Integration. If not, see http://www.gnu.org/licenses/gpl-2.0.txt.
  */
 
 if (!defined('ABSPATH')) exit;
@@ -137,8 +137,8 @@ if (!class_exists('WP_Centrix_Int')) {
 				$result = $centrixInt->get_pdf($url, $subscriberId, $userId, $userKey, $enquiryNumber);
 				echo $result;
 			} else {
-				error_log('centrix Integration plugin error: empty one or several required parameters - accessKey, secret, url or path. Please check settings of centrix Integration plugin');
-				echo '{"centrix Integration plugin error": "empty one or several required parameters - accessKey, secret, url or path"}';
+				error_log('Centrix Integration plugin error: empty one or several required parameters - accessKey, secret, url or path. Please check settings of centrix Integration plugin');
+				echo '{"Centrix Integration plugin error": "empty one or several required parameters - accessKey, secret, url or path"}';
 			}
 			wp_die();
 		}

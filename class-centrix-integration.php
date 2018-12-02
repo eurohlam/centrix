@@ -46,7 +46,7 @@ class Centrix_Integration {
                <cen:Addresses>
                   <cen:Address>
                      <cen:AddressType>C</cen:AddressType>
-                     <cen:AddressLine1>' . $requestData['details']['address']['streetname'] . '</cen:AddressLine1>
+                     <cen:AddressLine1>' . $requestData['details']['address']['streetnumber'] . ' ' . $requestData['details']['address']['streetname'] . '</cen:AddressLine1>
                      <cen:AddressLine2 />
                      <cen:Suburb>' . $requestData['details']['address']['suburb'] . '</cen:Suburb>
                      <cen:City>' . $requestData['details']['address']['city'] . '</cen:City>
