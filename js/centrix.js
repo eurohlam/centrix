@@ -17,6 +17,7 @@
         var street = $("input#street").val();
         var postcode = $("input#postcode").val();
         var country = $("input#country").val();
+        var addresstype = $("input[name='addresstype']:checked").val();
 
 		//get emails from FORM for sending resulted PDF
         var clientemail = $("input#clientemail").val();
@@ -56,7 +57,8 @@
                                  'postcode' : postcode,
                                  'country' : country,
                                  'streetname' : street,
-                                 'streetnumber' : streetnumber };
+                                 'streetnumber' : streetnumber,
+                                 'addresstype' : addresstype};
 
         if ( nz_passportnumber ) {
             data.details.passport = { 'number' : nz_passportnumber,

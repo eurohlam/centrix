@@ -77,6 +77,30 @@ function centrix_shortcodes_init()
 							<label>Street number</label>
                             <input id="streetnumber" class="form-control" required type="text" placeholder="Street number" />
                         </div>
+                    </div>
+                    <div class="row control-group">
+
+                        <div class="form-group col-xs-12 floating-label-form-group controls mx-3">
+                            <label>Address type</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addresstype" id="addressType1" value="C" checked>
+                                <label class="form-check-label" for="addressType1">
+                                 Current or Last Known Address
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addresstype" id="addressType2" value="P">
+                                <label class="form-check-label" for="addressType2">
+                                Previous Addres
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="addresstype" id="addressType3" value="M">
+                                <label class="form-check-label" for="addressType3">
+                                Mailing Address
+                                </label>
+                            </div>
+                        </div>
                     </div>';
 
         return $info;

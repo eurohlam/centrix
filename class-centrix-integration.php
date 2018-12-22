@@ -31,12 +31,16 @@ class Centrix_Integration {
             <cen:RequestDetails>
                <cen:EnquiryReason>IDVF</cen:EnquiryReason>
                <cen:SubscriberReference />
-            </cen:RequestDetails>
-            <cen:DriverLicence>
-               <cen:DriverLicenceNumber>' . $requestData['details']['driverslicence']['number'] . '</cen:DriverLicenceNumber>
-               <cen:DriverLicenceVersion>' . $requestData['details']['driverslicence']['version'] . '</cen:DriverLicenceVersion>
-            </cen:DriverLicence>
-            <cen:ConsumerData>
+            </cen:RequestDetails>';
+            if (isset($requestData['details']['driverslicence']['number'])) {
+                $request = $request .
+                '<cen:DriverLicence>
+                   <cen:DriverLicenceNumber>' . $requestData['details']['driverslicence']['number'] . '</cen:DriverLicenceNumber>
+                   <cen:DriverLicenceVersion>' . $requestData['details']['driverslicence']['version'] . '</cen:DriverLicenceVersion>
+                </cen:DriverLicence>';
+            }
+            $request = $request .
+            '<cen:ConsumerData>
                <cen:Personal>
                   <cen:Surname>' . $requestData['details']['name']['family'] . '</cen:Surname>
                   <cen:FirstName>' . $requestData['details']['name']['given'] . '</cen:FirstName>
@@ -45,7 +49,7 @@ class Centrix_Integration {
                </cen:Personal>
                <cen:Addresses>
                   <cen:Address>
-                     <cen:AddressType>C</cen:AddressType>
+                     <cen:AddressType>' . $requestData['details']['address']['addresstype'] . '</cen:AddressType>
                      <cen:AddressLine1>' . $requestData['details']['address']['streetnumber'] . ' ' . $requestData['details']['address']['streetname'] . '</cen:AddressLine1>
                      <cen:AddressLine2 />
                      <cen:Suburb>' . $requestData['details']['address']['suburb'] . '</cen:Suburb>
@@ -53,12 +57,15 @@ class Centrix_Integration {
                      <cen:Country>NZL</cen:Country>
                      <cen:Postcode>' . $requestData['details']['address']['postcode'] . '</cen:Postcode>
                   </cen:Address>
-               </cen:Addresses>
-               <cen:Passport>
-                  <cen:PassportNumber>AB132456</cen:PassportNumber>
-                  <cen:Expiry>2018-04-22</cen:Expiry>
-               </cen:Passport>
-            </cen:ConsumerData>
+               </cen:Addresses>';
+               if (isset($requestData['details']['passport']['number'])) {
+                   $request = $request .
+                   '<cen:Passport>
+                      <cen:PassportNumber>' . $requestData['details']['passport']['number'] . '</cen:PassportNumber>
+                      <cen:Expiry>' . $requestData['details']['passport']['expiry'] . '</cen:Expiry>
+                   </cen:Passport>';
+               }
+            $request = $request . '</cen:ConsumerData>
             <cen:Consents>
                <cen:Consent>
                   <cen:Name>DIAPassportVerification</cen:Name>
