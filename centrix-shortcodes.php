@@ -56,12 +56,12 @@ function centrix_shortcodes_init()
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls ml-3">
-							<label>Postcode</label>
-                            <input id="postcode" class="form-control" required type="text" placeholder="Postcode" />
+                        <label>Street number</label>
+                                      <input id="streetnumber" class="form-control" required type="text" placeholder="Street number" />
                         </div>
                         <div class="form-group col-xs-12 floating-label-form-group controls ml-3">
-							<label>City</label>
-                            <input id="city" class="form-control" required type="text" placeholder="City"/>
+                        <label>Street</label>
+                                      <input id="street" class="form-control" required type="text" placeholder="Street"/>
                         </div>
                         <div class="form-group col-xs-12 floating-label-form-group controls mx-3">
 							<label>Suburb</label>
@@ -70,12 +70,12 @@ function centrix_shortcodes_init()
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls ml-3">
-							<label>Street</label>
-                            <input id="street" class="form-control" required type="text" placeholder="Street"/>
+                        <label>City</label>
+                                      <input id="city" class="form-control" required type="text" placeholder="City"/>
                         </div>
                         <div class="form-group col-xs-12 floating-label-form-group controls mx-3">
-							<label>Street number</label>
-                            <input id="streetnumber" class="form-control" required type="text" placeholder="Street number" />
+                        <label>Postcode</label>
+                                      <input id="postcode" class="form-control" required type="text" placeholder="Postcode" />
                         </div>
                     </div>
                     <div class="row control-group">
